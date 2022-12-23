@@ -30,10 +30,6 @@ public class FilmEntity implements Serializable {
     @Column(name = "anno")
     private int anno;
 
-    @OneToMany(mappedBy = "film", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<SaleEntity> sale;
-
     @ManyToOne
     @JoinColumn(name = "genere", referencedColumnName = "id")
     private GenereEntity genere;
